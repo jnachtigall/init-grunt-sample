@@ -3,9 +3,10 @@ module.exports = function (grunt) {
     'syncAssets', 
     [
       'newer:concat',
-      'newer:uglify',
+      'newer:uglify:server',
       'compass:dev',
-      'sync:dist'
+      'sync:dist',
+      'delete_sync:dist'
     ]
   );
 };
